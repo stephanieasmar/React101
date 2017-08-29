@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/react@latest/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  <title>Document 3</title>
+</head>
+<body>
+  <div id="root"></div>
+
+<!--Version #1-->
+  <script type="text/babel">
+//     function Component () {
+//       return (
+//         <div>
+//           <span> 
+//             142
+//           </span>
+//         </div>
+//       );
+//     }
+
+// // Version #2: Props is always a single argument
+//     function Readout(props) {
+//       return (
+//         <div>
+//           <span> 
+//             { props.temperature }{ props.unit }
+//           </span>
+//         </div>
+//       );
+//     }
+
+// // Version #3
+//     const Readout = (props) => {
+//     return (
+//       <div>
+//         <span> 
+//           { props.temperature }{ props.unit }
+//         </span>
+//       </div>
+//     );
+//   }
+
+
+  // Version #4: Can kill curly braces and return statement if we are only declaring one thing
+    // const formatUnits = units => units.toUpperCase();
+    // const Readout = props => (
+    //   <div>
+    //     <span> 
+    //       { props.temperature }{ formatUnits(props.unit) }
+    //     </span>
+    //   </div>
+    // );
+
+  // Version #5: Can replace props with specific props(i.e. temp & units below)
+    const formatUnits = units => units.toUpperCase();
+    const Readout = ({temperature, unit}) => (
+      <div>
+        <span> 
+          { temperature }{ formatUnits(unit) }
+        </span>
+      </div>
+    );
+
+
+
+    const maximum = 15;
+    const minimum = 2;
+    const incRand = (num) => num + (Math.floor(Math.random() * (maximum - minimum + 1)) + minimum);
+
+    let currentTemps = [50, 50, 50, 50, 50];
+
+    setInterval(() => {
+
+      ReactDOM.render(
+        <div>
+          <Readout temperature={currentTemps[0]} unit="f"/>
+          <Readout temperature={currentTemps[1]} unit="f"/>
+          <Readout temperature={currentTemps[2]} unit="f"/>
+          <Readout temperature={currentTemps[3]} unit="f"/>
+          <Readout temperature={currentTemps[4]} unit="f"/>
+        </div>,
+        document.getElementById('root')
+      );
+      currentTemps = currentTemps.map(incRand);
+    }, 1000);
+
+
+    // ReactDOM.render(
+    //   <Readout temperature="178" unit="f"/>,
+    //   document.getElementById('root')
+    // );
+
+  </script>
+</body>
+</html>
