@@ -1,0 +1,54 @@
+Codecademy React Notes:
+
+const h1 = <h1>Hello world</h1>; this is not JS or HTML, its JSX
+
+JSX is a syntax extension for JavaScript. It was written to be used with React. JSX code looks a lot like HTML.
+What does "syntax extension" mean?
+In this case, it means that JSX is not valid JavaScript. Web browsers can't read it!
+If a JavaScript file contains JSX code, then that file will have to be compiled. 
+That means that before the file reaches a web browser, a JSX compiler will translate any JSX into regular JavaScript.
+
+<h1>Hello world</h1> = JSX element
+
+- JSX syntax allows for onlw one outtermost element, all other elements must be nested within it
+
+
+1. REACT METHODS:
+
+ReactDOM.render() - ReactDOM is the name of a JS library. This library contains several React-specific methods, all of which deal with the DOM in some way or another.
+.render is the actual methods. It takes a JSX expression, creates a corresponding tree of DOM nodes, and adds that tree to the DOM. That is the way to make a JSX expression appear onscreen.
+ReactDOM.render()'s first argument should evaluate to a JSX expression, it doesn't have to literally be a JSX expression.
+The first argument could also be a variable, so long as that variable evaluates to a JSX expression.
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+The following code example created a <ul> JSX element, and renders it to the app:
+var myList = (
+  <ul>
+    <li>Brady</li>
+    <li>Churro</li>
+    <li>Izzy</li>
+    <li>Lundy</li>
+  </ul>
+)
+
+ReactDOM.render(myList, document.getElementById('app'));
+
+
+2. IMPORTANT: One special thing about ReactDOM.render() is that it only updates DOM elements that have changed.
+            This is significant! Only updating the necessary DOM elements is a large part of what makes React so successful.
+
+
+3. VIRTUAL DOM: Its like a blueprint of the actual DOM
+    Here's what happens when you try to update the DOM in React:
+        -The entire virtual DOM gets updated.
+        -The virtual DOM gets compared to what it looked like before you updated it. React figures out which objects have changed.
+        -The changed objects, and the changed objects only, get updated on the real DOM.
+        -Changes on the real DOM cause the screen to change.
+
+WRAPPING TEXT INSIDE JSX ELEMENTS WILL CAUSE THEM TO BE READ AS JAVASCRIPT!!!
+
+
+4. EVENT LISTENERS:
+
+
