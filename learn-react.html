@@ -51,4 +51,41 @@ WRAPPING TEXT INSIDE JSX ELEMENTS WILL CAUSE THEM TO BE READ AS JAVASCRIPT!!!
 
 4. EVENT LISTENERS:
 
+The event listener's attribute value should be a pre-defined function
+
+ex: <img onClick={myFunc} />
+
+onClick
+onMouseOver
+
+Find more: https://facebook.github.io/react/docs/events.html#supported-events
+
+
+
+5. CONDITIONAL STATEMENTS:
+
+    let message;
+
+    if (user.age >= drinkingAge) {
+    message = (
+        <h1>
+        Hey, check out this alcoholic beverage!
+        </h1>
+    );
+    } else {
+    message = (
+        <h1>
+        Hey, check out these earrings I got at Claire's!
+        </h1>
+    );
+    }
+
+    ReactDOM.render(
+    message, 
+    document.getElementById('app')
+    );
+
+
+6. 
+
 
