@@ -15,3 +15,19 @@
 // You can tell this from the get in the above class declaration body.
 // There's nothing React-specific about getter methods, nor about this behaving in this way! 
 // However, in React you will see this used in this way almost constantly.
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+class MyName extends React.Component {
+	// name property goes here:
+  get name() {
+  	return 'Stephanie';
+  }
+
+  render() {
+    return <h1>My name is {this.name}.</h1>;
+  }
+}
+
+ReactDOM.render(<MyName />, document.getElementById('app'));
