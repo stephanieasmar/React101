@@ -74,3 +74,9 @@ ReactDOM.render(
   <Greeting firstName='Stephanie' />, 
   document.getElementById('app')
 );
+
+
+// PASSING PROPS FROM ONE COMPONENT TO ANOTHER:
+
+// The most common use of props is to pass information to a component, 
+// from a different component. You haven't done that yet, but it's very similar to what you've seen already.
