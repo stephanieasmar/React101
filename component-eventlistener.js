@@ -31,6 +31,7 @@ class MyClass extends React.Component {
 
 
 // MY CODED EXAMPLE:
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 
