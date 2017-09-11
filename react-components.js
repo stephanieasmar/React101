@@ -32,6 +32,18 @@ ReactDOM.render(
   <MyComponentClass />,
   document.getElementById('app')
 );
-
 // You've already seen one of the methods contained in the React library: React.createElement(). 
 // Recall that when a JSX element is compiled, it transforms into a React.createElement() call.
+
+
+
+
+// REACT COMPONENT CLASS INSTANCES:
+<MyComponentClass />
+// To make a React component, you write a JSX element. 
+// Instead of naming your JSX element something like h1 or div like you've done before, give it the same name as a component class. 
+// Voilà, there's your component instance!
+// JSX elements can be either HTML-like, or component instances. 
+// JSX uses capitalization to distinguish between the two! 
+// That is the React-specific reason why component class names must begin with capital letters. 
+// In a JSX element, that capitalized first letter says, "I will be a component instance and not an HTML tag."
