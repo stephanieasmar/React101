@@ -74,3 +74,9 @@ import { faveManifestos, alsoRan } from './Manifestos';
 
 // Use faveManifestos:
 console.log(`A Cyborg Manifesto:  ${faveManifestos.cyborg}`);
+
+
+// ***** NAMED EXPORTS ***** //
+// This style of importing and exporting in JavaScript is known as "named exports." 
+// When you use named exports, you always need to wrap your imported names in curly braces, 
+// such as import { faveManifestos, alsoRan } from './Manifestos'
