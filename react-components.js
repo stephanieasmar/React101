@@ -9,12 +9,10 @@
 // The below line of code creates a new variable. That variable's name is React, and its value is a particular, imported JavaScript object:
 // This imported object contains methods that you need in order to use React. The object is called the React library.
 import React from 'react';
-
 // The methods imported from 'react-dom' are meant for interacting with the DOM...ex: ReactDOM.render().
 // The DOM is used in React applications, but it isn't part of React. After all, the DOM is also used in countless non-React applications. 
 // Methods imported from 'react' are only for pure React purposes, such as creating components or writing JSX elements.
 import ReactDOM from 'react-dom';
-
 // every component must come from a component class. A component class is like a factory that creates components. 
 // If you have a component class, then you can use that class to produce as many components as you want.
 // To make a component class, you use a base class from the React library: React.Component.
@@ -22,10 +20,10 @@ import ReactDOM from 'react-dom';
 // React.Component is a JavaScript class. To create your own component class, you must subclass React.Component. 
 // You can do this by using the syntax class YourComponentNameGoesHere extends React.Component {}
 class MyComponentClass extends React.Component {
-
 // A component class is like a factory that builds components. It builds these components by consulting a set of instructions, 
 // which you must provide. These instructions should take the form of a class declaration body. 
   render() {
+// A render method must contain a return statement. Usually, this return statement returns a JSX expression
     return <h1>Hello world</h1>;
   }
 };
